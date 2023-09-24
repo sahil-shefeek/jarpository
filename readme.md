@@ -138,7 +138,3 @@ Contributions to Jarpository are encouraged and welcome! If you're interested in
 5. Push your branch to your forked repository.
 
 6. Open a pull request in the main repository, detailing the changes you've made.
-
-```
-
-```
