@@ -10,7 +10,8 @@ Jarpository is a collection of Java programs aimed at assisting students of KTU 
 - [Features](#features)
 - [Navigation](#navigation)
 - [Setup](#setup)
-- [Usage](#usage)
+- [Usage](#example-usage)
+- [Cleaner](#cleaner)
 - [Contribution](#contribution)
 - [License](#license)
 
@@ -92,6 +93,36 @@ Each program is stored in a separate file with a descriptive name. To use a spec
 
 4. Save your changes and follow the setup instructions above to compile and run the program.
 
+## Cleaner
+
+When you run `cleaner.sh` from within the "jarpository" directory, it will scan for and list any `.class` files within the project directory and its subdirectories, giving you the option to delete them.
+
+### Usage
+
+1. Open a terminal and navigate to the project's root directory.
+
+2. Ensure the script has executable permissions. If it doesn't, grant them by running:
+
+   ```bash
+   chmod +x cleaner.sh
+   ```
+
+3. Run the script by entering the following command:
+
+   ```bash
+   ./cleaner.sh
+   ```
+
+4. The script will scan your project directory and list any Java bytecode (.class) files it finds, including those in subdirectories. You will be prompted with the following message:
+
+   ```
+   Do you want to delete the listed .class files? (yes/no):
+   ```
+
+   Enter "yes" (or any variation) to confirm and delete the listed .class files. Alternatively, enter "no" to cancel the deletion.
+
+   The script will proceed to delete the selected .class files if you confirm.
+
 ## Contribution
 
 Contributions to Jarpository are encouraged and welcome! If you're interested in contributing, follow these steps:
@@ -107,3 +138,7 @@ Contributions to Jarpository are encouraged and welcome! If you're interested in
 5. Push your branch to your forked repository.
 
 6. Open a pull request in the main repository, detailing the changes you've made.
+
+```
+
+```
