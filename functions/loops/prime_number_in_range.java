@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class prime_number {
+public class prime_number_in_range {
 
     static boolean is_prime(int num) {
         if (num == 1)
