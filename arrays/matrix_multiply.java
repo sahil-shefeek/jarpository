@@ -32,6 +32,13 @@ public class matrix_multiply {
                     }
                 }
             }
+
+            System.out.println("Product is:");
+            for (int i = 0; i < bRows; i++) {
+                for (int j = 0; j < bCols; j++)
+                    System.out.printf("%d\t", res[i][j]);
+                System.out.println();
+            }
         }
     }
 }
