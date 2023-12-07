@@ -15,7 +15,6 @@ public class calculator extends JFrame {
 
         // Create components
         textField = new JTextField();
-        textField.setEditable(false);
 
         JButton[] digitButtons = new JButton[10];
         for (int i = 0; i < 10; i++) {
