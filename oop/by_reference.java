@@ -6,7 +6,7 @@ class MyNumber {
     }
 }
 
-public class CallByReferenceDemo {
+public class by_reference {
     public static void main(String[] args) {
         MyNumber number = new MyNumber(10);
         System.out.println("Original Value: " + number.value);

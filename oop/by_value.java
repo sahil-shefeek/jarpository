@@ -6,7 +6,7 @@ class MyNumber {
     }
 }
 
-public class CallByValueDemo {
+public class by_value {
     public static void main(String[] args) {
         MyNumber number = new MyNumber(10);
         System.out.println("Original Value: " + number.value);

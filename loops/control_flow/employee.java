@@ -16,7 +16,7 @@ class Manager extends Employee {
     String department;
 }
 
-public class test {
+public class employee {
     public static void main(String[] args) {
         Officer officer = new Officer();
         officer.name = "John Doe";

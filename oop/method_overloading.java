@@ -12,7 +12,7 @@ public class method_overloading {
     }
 
     public static float calculateArea(float base, float height) {
-        return 0.5 * base * height;
+        return (float) 0.5 * base * height;
     }
 
     public static void main(String[] args) {
