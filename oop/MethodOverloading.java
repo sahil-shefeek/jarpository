@@ -1,7 +1,7 @@
 import java.util.Scanner;
 import java.lang.Math;
 
-public class method_overloading {
+public class MethodOverloading {
 
     public static double calculateArea(double radius) {
         return Math.PI * radius * radius;
@@ -11,8 +11,8 @@ public class method_overloading {
         return length * width;
     }
 
-    public static float calculateArea(float base, float height) {
-        return (float) 0.5 * base * height;
+    public static double calculateArea(float base, float height) {
+        return 0.5 * base * height;
     }
 
     public static void main(String[] args) {
@@ -45,7 +45,7 @@ public class method_overloading {
                 System.out.println("Area of the triangle: " + calculateArea(base, height));
                 break;
             default:
-                System.out.println("Invalid choice");
+                System.out.println("Invalid choice!");
         }
 
     }

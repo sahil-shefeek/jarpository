@@ -9,13 +9,13 @@ class GUI implements ActionListener {
 
     GUI() {
 
-        frame = new JFrame();
-        frame.setTitle("Simple Calculator");
+        frame = new JFrame("Simple Calculator");
         frame.setSize(480, 640);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(new GridLayout(6, 3));
 
         textField = new JTextField(25);
+        textField.setBounds(50, 25, 300, 50);
 
         JButton[] digitButtons = new JButton[10];
         for (int i = 0; i < 10; i++) {
