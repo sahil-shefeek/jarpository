@@ -6,7 +6,7 @@ class MyNumber {
     }
 }
 
-public class by_value {
+public class __by_value__ {
     public static void main(String[] args) {
         MyNumber number = new MyNumber(10);
         System.out.println("Original Value: " + number.value);

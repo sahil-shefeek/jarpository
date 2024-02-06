@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class matrix_multiply {
+public class MatrixMultiply {
     public static void main(String[] args) {
         int aRows, aCols, bRows, bCols;
         Scanner scanner = new Scanner(System.in);

@@ -30,7 +30,7 @@ class Box {
     }
 }
 
-public class constructor_overloading {
+public class ConstructorOverloading {
     public static void main(String[] args) {
         // Create box objects using different constructors
         Box box1 = new Box(); // Default box

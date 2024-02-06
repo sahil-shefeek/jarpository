@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class sumOfN {
+public class SumOfDigits {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         int temp, digit, sum = 0;

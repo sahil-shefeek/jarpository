@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class matrix_add {
+public class MatrixAddition {
     public static void main(String[] args) {
         int rows, cols;
         Scanner scanner = new Scanner(System.in);

@@ -1,6 +1,6 @@
 import java.util.Scanner;
 
-public class ascendingOrder {
+public class AscendingOrder {
     public static void main(String[] args) {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter the limit :");
