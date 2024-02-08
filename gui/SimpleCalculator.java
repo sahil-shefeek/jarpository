@@ -3,6 +3,7 @@ import java.awt.*;
 import java.awt.event.*;
 import java.util.Stack;
 import java.util.StringTokenizer;
+import sahil.InfixExpressionUtils;
 
 class GUI implements ActionListener {
     JFrame frame;
@@ -63,77 +64,11 @@ class GUI implements ActionListener {
         frame.setVisible(true);
     }
 
-    boolean isOperator(String str) {
-        switch (str) {
-            case "+":
-            case "-":
-            case "*":
-            case "/":
-            case "%":
-                return true;
-        }
-        return false;
-    }
-
-    int precedence(String str) {
-        switch (str) {
-            case "+":
-            case "-":
-                return 1;
-            case "*":
-            case "/":
-            case "%":
-                return 2;
-        }
-        return 0;
-    }
-
-    double evaluate(double y, double x, String op) {
-        switch (op) {
-            case "+":
-                return x + y;
-            case "-":
-                return x - y;
-            case "*":
-                return x * y;
-            case "/":
-                if (y == 0) {
-                    throw new ArithmeticException();
-                }
-                return x / y;
-            case "%":
-                return x % y;
-        }
-        return 0;
-    }
-
-    double evaluateExpression(String expression) {
-        Stack<String> operators = new Stack<>();
-        Stack<Double> operands = new Stack<>();
-        StringTokenizer tokenizer = new StringTokenizer(expression, "+-*/%", true);
-        while (tokenizer.hasMoreTokens()) {
-            String token = tokenizer.nextToken();
-            if (isOperator(token)) {
-                while ((!operators.isEmpty()) && precedence(operators.peek()) > precedence(token))
-                    operands.push(evaluate(operands.pop(), operands.pop(), operators.pop()));
-                operators.push(token);
-            } else {
-                operands.push(Double.parseDouble(token));
-            }
-        }
-        while (!operators.isEmpty())
-            operands.push(evaluate(operands.pop(), operands.pop(), operators.pop()));
-
-        if (!operands.isEmpty())
-            return operands.pop();
-        return 0;
-    }
-
     public void actionPerformed(ActionEvent e) {
         JButton source = (JButton) e.getSource();
         if (source == equalsButton) {
             try {
-                double result = evaluateExpression(textField.getText());
+                double result = InfixExpressionUtils.evaluateInfixExpression(textField.getText());
                 textField.setText(String.valueOf(result));
             } catch (ArithmeticException ex) {
                 textField.setText("Error: Divide by zero");
