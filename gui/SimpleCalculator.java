@@ -16,6 +16,7 @@ class GUI implements ActionListener {
         frame.setSize(480, 640);
         frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
         frame.setLayout(null);
+        frame.getContentPane().setBackground(Color.GRAY);
         textField = new JTextField(32);
         textField.setBounds(0, 0, 480, 64);
         addButton = new JButton("+");
@@ -42,6 +43,7 @@ class GUI implements ActionListener {
         buttonsPanel = new JPanel();
         buttonsPanel.setBounds(0, 64, 480, 540);
         buttonsPanel.setLayout(new GridLayout(6, 3, 5, 5));
+        buttonsPanel.setBackground(Color.GRAY);
         buttonsPanel.add(clearButton);
         buttonsPanel.add(deleteButton);
         buttonsPanel.add(addButton);
